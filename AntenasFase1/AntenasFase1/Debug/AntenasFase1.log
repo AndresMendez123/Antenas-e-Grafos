@@ -1,0 +1,5 @@
+﻿  funcoes.c
+  main.c
+C:\Users\viera\source\repos\AntenasFase1\AntenasFase1\main.c(5,31): warning C4081: expected 'newline'; found ')'
+  Generating Code...
+  AntenasFase1.vcxproj -> C:\Users\viera\source\repos\AntenasFase1\Debug\AntenasFase1.exe

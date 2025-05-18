@@ -1,0 +1,30 @@
+Lista de Antenas:
+Frequência:  	Linha: 0	Coluna: 12
+Frequência:  	Linha: 0	Coluna: 13
+Frequência:  	Linha: 1	Coluna: 12
+Frequência:  	Linha: 1	Coluna: 13
+Frequência:  	Linha: 2	Coluna: 12
+Frequência:  	Linha: 2	Coluna: 13
+Frequência:  	Linha: 3	Coluna: 12
+Frequência:  	Linha: 3	Coluna: 13
+Frequência:  	Linha: 4	Coluna: 12
+Frequência:  	Linha: 4	Coluna: 13
+Frequência:  	Linha: 5	Coluna: 12
+Frequência:  	Linha: 5	Coluna: 13
+Frequência:  	Linha: 6	Coluna: 12
+Frequência:  	Linha: 6	Coluna: 13
+Frequência:  	Linha: 7	Coluna: 12
+Frequência:  	Linha: 7	Coluna: 13
+Frequência:  	Linha: 8	Coluna: 12
+Frequência:  	Linha: 8	Coluna: 13
+Frequência:  	Linha: 9	Coluna: 12
+Frequência:  	Linha: 9	Coluna: 13
+Frequência:  	Linha: 10	Coluna: 12
+Frequência:  	Linha: 10	Coluna: 13
+Frequência: 0	Linha: 1	Coluna: 8
+Frequência: 0	Linha: 2	Coluna: 5
+Frequência: 0	Linha: 3	Coluna: 7
+Frequência: 0	Linha: 4	Coluna: 4
+Frequência: A	Linha: 5	Coluna: 6
+Frequência: A	Linha: 8	Coluna: 8
+Frequência: A	Linha: 9	Coluna: 9

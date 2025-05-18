@@ -1,0 +1,261 @@
+\doxysection{Antenas\+Fase1/funcoes.c File Reference}
+\hypertarget{funcoes_8c}{}\label{funcoes_8c}\index{AntenasFase1/funcoes.c@{AntenasFase1/funcoes.c}}
+
+
+Implementa{\ucr}{\ucr}o das fun{\ucr}{\ucr}es da Fase 1.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include "{}estruturas.\+h"{}}\newline
+Include dependency graph for funcoes.\+c\+:
+% FIG 0
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structantena}{ANTENA}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{funcoes_8c_a2d48ece12b592c569d45f89a460d7385}{criar\+Antena}} (char freq, int linha, int coluna)
+\begin{DoxyCompactList}\small\item\em Cria uma nova antena com os dados fornecidos. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structantena}{ANTENA}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{funcoes_8c_aa41a6a5c4c96505790744a52bd7c7472}{inserir\+Ordenado\+Antena}} (\mbox{\hyperlink{structantena}{ANTENA}} \texorpdfstring{$\ast$}{*}lista, char freq, int linha, int coluna)
+\begin{DoxyCompactList}\small\item\em Insere uma antena na lista de forma ordenada e evita duplicados. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structantena}{ANTENA}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{funcoes_8c_a8929b258b6ad1651a254459db0f633a5}{remover\+Antena}} (\mbox{\hyperlink{structantena}{ANTENA}} \texorpdfstring{$\ast$}{*}lista, int linha, int coluna)
+\begin{DoxyCompactList}\small\item\em Remove uma antena com as coordenadas indicadas. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlocalizacao}{LOCAL}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{funcoes_8c_ab86bec0a9bb2ebc77b925d0111438de5}{criar\+Local}} (int linha, int coluna)
+\begin{DoxyCompactList}\small\item\em Cria uma nova localizacao com efeito nefasto. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlocalizacao}{LOCAL}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{funcoes_8c_a36c48652df7f0b1369009dfdaf81e6ac}{inserir\+Local}} (\mbox{\hyperlink{structlocalizacao}{LOCAL}} \texorpdfstring{$\ast$}{*}lista, int linha, int coluna)
+\begin{DoxyCompactList}\small\item\em Insere uma localizacao afetada, evitando duplicados. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{funcoes_8c_a0d16ea4dfefa5d6fee05ca680c2ed231}{listar\+Antenas}} (\mbox{\hyperlink{structantena}{ANTENA}} \texorpdfstring{$\ast$}{*}lista)
+\begin{DoxyCompactList}\small\item\em Lista todas as antenas na consola. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{funcoes_8c_a2c1dba11926b623a3879d9bbdaadf4f6}{listar\+Localizacoes}} (\mbox{\hyperlink{structlocalizacao}{LOCAL}} \texorpdfstring{$\ast$}{*}lista)
+\begin{DoxyCompactList}\small\item\em Lista todas as localizacoes com efeito nefasto. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{funcoes_8c_a3b606576643126c153f1f2be8f1a3c8c}{desenhar\+Matriz}} (int linhas, int colunas, \mbox{\hyperlink{structantena}{ANTENA}} \texorpdfstring{$\ast$}{*}lista, \mbox{\hyperlink{structlocalizacao}{LOCAL}} \texorpdfstring{$\ast$}{*}locais)
+\begin{DoxyCompactList}\small\item\em Desenha a matriz com antenas e locais nefastos. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structantena}{ANTENA}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{funcoes_8c_a39ea79dfae4308d4f0e3e173d6db7c4a}{ler\+Matriz\+De\+Ficheiro}} (const char \texorpdfstring{$\ast$}{*}nome\+Ficheiro, int \texorpdfstring{$\ast$}{*}linhas, int \texorpdfstring{$\ast$}{*}colunas)
+\begin{DoxyCompactList}\small\item\em Le uma matriz do ficheiro e cria a lista ligada de antenas. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlocalizacao}{LOCAL}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{funcoes_8c_a536a318d33ec00981fb7d2f1dd680897}{deduzir\+Efeitos\+Nefastos}} (\mbox{\hyperlink{structantena}{ANTENA}} \texorpdfstring{$\ast$}{*}antenas)
+\begin{DoxyCompactList}\small\item\em Deduz as localizacoes com efeito nefasto com base em pares de antenas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementa{\ucr}{\ucr}o das fun{\ucr}{\ucr}es da Fase 1. 
+
+\begin{DoxyAuthor}{Author}
+Andrés Mendez 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2025-\/05-\/16 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{funcoes_8c_a2d48ece12b592c569d45f89a460d7385}\label{funcoes_8c_a2d48ece12b592c569d45f89a460d7385} 
+\index{funcoes.c@{funcoes.c}!criarAntena@{criarAntena}}
+\index{criarAntena@{criarAntena}!funcoes.c@{funcoes.c}}
+\doxysubsubsection{\texorpdfstring{criarAntena()}{criarAntena()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structantena}{ANTENA}} \texorpdfstring{$\ast$}{*} criar\+Antena (\begin{DoxyParamCaption}\item[{char}]{freq,  }\item[{int}]{linha,  }\item[{int}]{coluna }\end{DoxyParamCaption})}
+
+
+
+Cria uma nova antena com os dados fornecidos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em freq} & Frequencia da antena. \\
+\hline
+{\em linha} & Linha da matriz onde se encontra. \\
+\hline
+{\em coluna} & Coluna da matriz onde se encontra. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ponteiro para a nova antena criada. 
+\end{DoxyReturn}
+\Hypertarget{funcoes_8c_ab86bec0a9bb2ebc77b925d0111438de5}\label{funcoes_8c_ab86bec0a9bb2ebc77b925d0111438de5} 
+\index{funcoes.c@{funcoes.c}!criarLocal@{criarLocal}}
+\index{criarLocal@{criarLocal}!funcoes.c@{funcoes.c}}
+\doxysubsubsection{\texorpdfstring{criarLocal()}{criarLocal()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlocalizacao}{LOCAL}} \texorpdfstring{$\ast$}{*} criar\+Local (\begin{DoxyParamCaption}\item[{int}]{linha,  }\item[{int}]{coluna }\end{DoxyParamCaption})}
+
+
+
+Cria uma nova localizacao com efeito nefasto. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em linha} & Linha da localizacao. \\
+\hline
+{\em coluna} & Coluna da localizacao. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ponteiro para o novo local. 
+\end{DoxyReturn}
+\Hypertarget{funcoes_8c_a536a318d33ec00981fb7d2f1dd680897}\label{funcoes_8c_a536a318d33ec00981fb7d2f1dd680897} 
+\index{funcoes.c@{funcoes.c}!deduzirEfeitosNefastos@{deduzirEfeitosNefastos}}
+\index{deduzirEfeitosNefastos@{deduzirEfeitosNefastos}!funcoes.c@{funcoes.c}}
+\doxysubsubsection{\texorpdfstring{deduzirEfeitosNefastos()}{deduzirEfeitosNefastos()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlocalizacao}{LOCAL}} \texorpdfstring{$\ast$}{*} deduzir\+Efeitos\+Nefastos (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structantena}{ANTENA}} \texorpdfstring{$\ast$}{*}}]{antenas }\end{DoxyParamCaption})}
+
+
+
+Deduz as localizacoes com efeito nefasto com base em pares de antenas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em antenas} & Lista de antenas. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Lista de locais com efeito nefasto. 
+\end{DoxyReturn}
+\Hypertarget{funcoes_8c_a3b606576643126c153f1f2be8f1a3c8c}\label{funcoes_8c_a3b606576643126c153f1f2be8f1a3c8c} 
+\index{funcoes.c@{funcoes.c}!desenharMatriz@{desenharMatriz}}
+\index{desenharMatriz@{desenharMatriz}!funcoes.c@{funcoes.c}}
+\doxysubsubsection{\texorpdfstring{desenharMatriz()}{desenharMatriz()}}
+{\footnotesize\ttfamily int desenhar\+Matriz (\begin{DoxyParamCaption}\item[{int}]{linhas,  }\item[{int}]{colunas,  }\item[{\mbox{\hyperlink{structantena}{ANTENA}} \texorpdfstring{$\ast$}{*}}]{lista,  }\item[{\mbox{\hyperlink{structlocalizacao}{LOCAL}} \texorpdfstring{$\ast$}{*}}]{locais }\end{DoxyParamCaption})}
+
+
+
+Desenha a matriz com antenas e locais nefastos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em linhas} & Numero de linhas da matriz. \\
+\hline
+{\em colunas} & Numero de colunas da matriz. \\
+\hline
+{\em lista} & Lista de antenas. \\
+\hline
+{\em locais} & Lista de locais afetados. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 se desenhado, 0 se listas vazias. 
+\end{DoxyReturn}
+\Hypertarget{funcoes_8c_a36c48652df7f0b1369009dfdaf81e6ac}\label{funcoes_8c_a36c48652df7f0b1369009dfdaf81e6ac} 
+\index{funcoes.c@{funcoes.c}!inserirLocal@{inserirLocal}}
+\index{inserirLocal@{inserirLocal}!funcoes.c@{funcoes.c}}
+\doxysubsubsection{\texorpdfstring{inserirLocal()}{inserirLocal()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlocalizacao}{LOCAL}} \texorpdfstring{$\ast$}{*} inserir\+Local (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlocalizacao}{LOCAL}} \texorpdfstring{$\ast$}{*}}]{lista,  }\item[{int}]{linha,  }\item[{int}]{coluna }\end{DoxyParamCaption})}
+
+
+
+Insere uma localizacao afetada, evitando duplicados. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista} & Lista de locais. \\
+\hline
+{\em linha} & Linha a inserir. \\
+\hline
+{\em coluna} & Coluna a inserir. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nova cabeca da lista. 
+\end{DoxyReturn}
+\Hypertarget{funcoes_8c_aa41a6a5c4c96505790744a52bd7c7472}\label{funcoes_8c_aa41a6a5c4c96505790744a52bd7c7472} 
+\index{funcoes.c@{funcoes.c}!inserirOrdenadoAntena@{inserirOrdenadoAntena}}
+\index{inserirOrdenadoAntena@{inserirOrdenadoAntena}!funcoes.c@{funcoes.c}}
+\doxysubsubsection{\texorpdfstring{inserirOrdenadoAntena()}{inserirOrdenadoAntena()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structantena}{ANTENA}} \texorpdfstring{$\ast$}{*} inserir\+Ordenado\+Antena (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structantena}{ANTENA}} \texorpdfstring{$\ast$}{*}}]{lista,  }\item[{char}]{freq,  }\item[{int}]{linha,  }\item[{int}]{coluna }\end{DoxyParamCaption})}
+
+
+
+Insere uma antena na lista de forma ordenada e evita duplicados. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista} & Lista atual de antenas. \\
+\hline
+{\em freq} & Frequencia da nova antena. \\
+\hline
+{\em linha} & Linha onde esta a antena. \\
+\hline
+{\em coluna} & Coluna onde esta a antena. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nova cabeca da lista. 
+\end{DoxyReturn}
+\Hypertarget{funcoes_8c_a39ea79dfae4308d4f0e3e173d6db7c4a}\label{funcoes_8c_a39ea79dfae4308d4f0e3e173d6db7c4a} 
+\index{funcoes.c@{funcoes.c}!lerMatrizDeFicheiro@{lerMatrizDeFicheiro}}
+\index{lerMatrizDeFicheiro@{lerMatrizDeFicheiro}!funcoes.c@{funcoes.c}}
+\doxysubsubsection{\texorpdfstring{lerMatrizDeFicheiro()}{lerMatrizDeFicheiro()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structantena}{ANTENA}} \texorpdfstring{$\ast$}{*} ler\+Matriz\+De\+Ficheiro (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{nome\+Ficheiro,  }\item[{int \texorpdfstring{$\ast$}{*}}]{linhas,  }\item[{int \texorpdfstring{$\ast$}{*}}]{colunas }\end{DoxyParamCaption})}
+
+
+
+Le uma matriz do ficheiro e cria a lista ligada de antenas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nome\+Ficheiro} & Nome do ficheiro de entrada. \\
+\hline
+{\em linhas} & Ponteiro para armazenar o numero de linhas. \\
+\hline
+{\em colunas} & Ponteiro para armazenar o numero de colunas. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Lista ligada de antenas. 
+\end{DoxyReturn}
+\Hypertarget{funcoes_8c_a0d16ea4dfefa5d6fee05ca680c2ed231}\label{funcoes_8c_a0d16ea4dfefa5d6fee05ca680c2ed231} 
+\index{funcoes.c@{funcoes.c}!listarAntenas@{listarAntenas}}
+\index{listarAntenas@{listarAntenas}!funcoes.c@{funcoes.c}}
+\doxysubsubsection{\texorpdfstring{listarAntenas()}{listarAntenas()}}
+{\footnotesize\ttfamily int listar\+Antenas (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structantena}{ANTENA}} \texorpdfstring{$\ast$}{*}}]{lista }\end{DoxyParamCaption})}
+
+
+
+Lista todas as antenas na consola. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista} & Lista de antenas. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 se listado com sucesso, 0 se lista vazia. 
+\end{DoxyReturn}
+\Hypertarget{funcoes_8c_a2c1dba11926b623a3879d9bbdaadf4f6}\label{funcoes_8c_a2c1dba11926b623a3879d9bbdaadf4f6} 
+\index{funcoes.c@{funcoes.c}!listarLocalizacoes@{listarLocalizacoes}}
+\index{listarLocalizacoes@{listarLocalizacoes}!funcoes.c@{funcoes.c}}
+\doxysubsubsection{\texorpdfstring{listarLocalizacoes()}{listarLocalizacoes()}}
+{\footnotesize\ttfamily int listar\+Localizacoes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlocalizacao}{LOCAL}} \texorpdfstring{$\ast$}{*}}]{lista }\end{DoxyParamCaption})}
+
+
+
+Lista todas as localizacoes com efeito nefasto. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista} & Lista de locais. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 se listado com sucesso, 0 se lista vazia. 
+\end{DoxyReturn}
+\Hypertarget{funcoes_8c_a8929b258b6ad1651a254459db0f633a5}\label{funcoes_8c_a8929b258b6ad1651a254459db0f633a5} 
+\index{funcoes.c@{funcoes.c}!removerAntena@{removerAntena}}
+\index{removerAntena@{removerAntena}!funcoes.c@{funcoes.c}}
+\doxysubsubsection{\texorpdfstring{removerAntena()}{removerAntena()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structantena}{ANTENA}} \texorpdfstring{$\ast$}{*} remover\+Antena (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structantena}{ANTENA}} \texorpdfstring{$\ast$}{*}}]{lista,  }\item[{int}]{linha,  }\item[{int}]{coluna }\end{DoxyParamCaption})}
+
+
+
+Remove uma antena com as coordenadas indicadas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista} & Lista de antenas. \\
+\hline
+{\em linha} & Linha da antena a remover. \\
+\hline
+{\em coluna} & Coluna da antena a remover. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nova cabeca da lista. 
+\end{DoxyReturn}

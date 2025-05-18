@@ -1,0 +1,40 @@
+\doxysection{estruturas.\+h}
+\hypertarget{estruturas_8h_source}{}\label{estruturas_8h_source}\index{AntenasFase1/estruturas.h@{AntenasFase1/estruturas.h}}
+\mbox{\hyperlink{estruturas_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ ESTRUTURAS\_H}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ ESTRUTURAS\_H}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structantena}{antena}}\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{structantena_ac000e2bd973314e1f4221c4616179750}{freq}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structantena_a3a6dc731d2b8a14c5a9f0d7eadb942b7}{linha}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structantena_af3dd695ab975a6ae0904973809f458cf}{coluna}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structantena}{antena}}*\ \mbox{\hyperlink{structantena_af8b862e53d48b5ef8c7a2ba697828c67}{prox}};\ \ \ \ \ \ }
+\DoxyCodeLine{00020\ \}\ \mbox{\hyperlink{structantena}{ANTENA}};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structlocalizacao}{localizacao}}\ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structlocalizacao_ab8555fbaa0c8320f76ce57799d99f415}{linha}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structlocalizacao_a2978103ee9374535cc1aabf5e784859d}{coluna}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structlocalizacao}{localizacao}}*\ \mbox{\hyperlink{structlocalizacao_abc8e3f074346da864001a17975dd487c}{prox}};\ }
+\DoxyCodeLine{00030\ \}\ \mbox{\hyperlink{structlocalizacao}{LOCAL}};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{comment}{//\ Funcoes\ para\ antenas}}
+\DoxyCodeLine{00033\ \mbox{\hyperlink{structantena}{ANTENA}}*\ \mbox{\hyperlink{estruturas_8h_a2d48ece12b592c569d45f89a460d7385}{criarAntena}}(\textcolor{keywordtype}{char}\ freq,\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structlocalizacao_ab8555fbaa0c8320f76ce57799d99f415}{linha}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structlocalizacao_a2978103ee9374535cc1aabf5e784859d}{coluna}});}
+\DoxyCodeLine{00034\ \mbox{\hyperlink{structantena}{ANTENA}}*\ \mbox{\hyperlink{estruturas_8h_aa41a6a5c4c96505790744a52bd7c7472}{inserirOrdenadoAntena}}(\mbox{\hyperlink{structantena}{ANTENA}}*\ lista,\ \textcolor{keywordtype}{char}\ freq,\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structlocalizacao_ab8555fbaa0c8320f76ce57799d99f415}{linha}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structlocalizacao_a2978103ee9374535cc1aabf5e784859d}{coluna}});}
+\DoxyCodeLine{00035\ \mbox{\hyperlink{structantena}{ANTENA}}*\ \mbox{\hyperlink{estruturas_8h_a8929b258b6ad1651a254459db0f633a5}{removerAntena}}(\mbox{\hyperlink{structantena}{ANTENA}}*\ lista,\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structlocalizacao_ab8555fbaa0c8320f76ce57799d99f415}{linha}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structlocalizacao_a2978103ee9374535cc1aabf5e784859d}{coluna}});}
+\DoxyCodeLine{00036\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{estruturas_8h_a0d16ea4dfefa5d6fee05ca680c2ed231}{listarAntenas}}(\mbox{\hyperlink{structantena}{ANTENA}}*\ lista);}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{comment}{//\ Funcoes\ para\ localizacoes}}
+\DoxyCodeLine{00039\ \mbox{\hyperlink{structlocalizacao}{LOCAL}}*\ \mbox{\hyperlink{estruturas_8h_ab86bec0a9bb2ebc77b925d0111438de5}{criarLocal}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{structlocalizacao_ab8555fbaa0c8320f76ce57799d99f415}{linha}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structlocalizacao_a2978103ee9374535cc1aabf5e784859d}{coluna}});}
+\DoxyCodeLine{00040\ \mbox{\hyperlink{structlocalizacao}{LOCAL}}*\ \mbox{\hyperlink{estruturas_8h_a36c48652df7f0b1369009dfdaf81e6ac}{inserirLocal}}(\mbox{\hyperlink{structlocalizacao}{LOCAL}}*\ lista,\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structlocalizacao_ab8555fbaa0c8320f76ce57799d99f415}{linha}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structlocalizacao_a2978103ee9374535cc1aabf5e784859d}{coluna}});}
+\DoxyCodeLine{00041\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{estruturas_8h_a2c1dba11926b623a3879d9bbdaadf4f6}{listarLocalizacoes}}(\mbox{\hyperlink{structlocalizacao}{LOCAL}}*\ lista);}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{comment}{//\ Operacoes\ gerais}}
+\DoxyCodeLine{00044\ \mbox{\hyperlink{structantena}{ANTENA}}*\ \mbox{\hyperlink{estruturas_8h_a39ea79dfae4308d4f0e3e173d6db7c4a}{lerMatrizDeFicheiro}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ nomeFicheiro,\ \textcolor{keywordtype}{int}*\ linhas,\ \textcolor{keywordtype}{int}*\ colunas);}
+\DoxyCodeLine{00045\ \mbox{\hyperlink{structlocalizacao}{LOCAL}}*\ \mbox{\hyperlink{estruturas_8h_a1f09a6332d0e50b8b0852c547cd9f39c}{deduzirEfeitosNefastos}}(\mbox{\hyperlink{structantena}{ANTENA}}*\ lista);}
+\DoxyCodeLine{00046\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{estruturas_8h_a3b606576643126c153f1f2be8f1a3c8c}{desenharMatriz}}(\textcolor{keywordtype}{int}\ linhas,\ \textcolor{keywordtype}{int}\ colunas,\ \mbox{\hyperlink{structantena}{ANTENA}}*\ lista,\ \mbox{\hyperlink{structlocalizacao}{LOCAL}}*\ locais);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
